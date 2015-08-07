@@ -5,9 +5,13 @@
 http://www.springframework.org/schema/beans        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  
 http://www.springframework.org/schema/context                http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-
-	<bean id="hello" name="h1,h2,h3" class="kaitao.spring3.chapter2.HelloImp1" scope="prototype">
+	<bean id="writer" class="spring2.chapter2.two.UsbDiskWriter">
 	</bean>
 
-	<bean id="word" class="kaitao.spring3.chapter2.HelloImp" ></bean>	
+	<bean id="business" class="spring2.chapter2.two.Business">
+		<constructor-arg>
+			<ref bean="writer"></ref>
+		</constructor-arg>
+	</bean>
+
 </beans> 

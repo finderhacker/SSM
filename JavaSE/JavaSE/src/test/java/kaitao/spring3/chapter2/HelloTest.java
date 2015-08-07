@@ -9,9 +9,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class HelloTest {
 
 	@Test
-	public void testHelloWord(){
-		ApplicationContext ac = new ClassPathXmlApplicationContext("kaitao/spring3/chapter2/HelloWord2.xml" , "kaitao/spring3/chapter2/HelloWord.xml") ;
+	public void testHelloWord() {
+		ApplicationContext ac = new ClassPathXmlApplicationContext(
+				//"classpath*:**/HelloWord2.xml",
+				"kaitao/spring3/chapter2/HelloWord.xml");
 
-		ac.getBean("h1") ;
+		ac.getBean("h1");
 	}
 }
