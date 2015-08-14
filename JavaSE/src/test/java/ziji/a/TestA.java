@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Vector;
 
 import net.sf.json.JSONSerializer;
 
@@ -29,11 +28,10 @@ public class TestA {
 
 	@Test
 	public void aa() {
-		BigDecimal b = new BigDecimal(-0.00);
-		BigDecimal b2 = BigDecimal.ZERO;
+		String str=  "a,b,c,d,e,f";
 		
-		System.out.println(b.equals(b2));
-		System.out.println(b.compareTo(b2));
+		String[] a = new String[]{str};
+		System.out.println(a.length);
 		
 	}
 }
