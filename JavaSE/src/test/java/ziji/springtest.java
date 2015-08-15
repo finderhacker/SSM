@@ -20,8 +20,6 @@ public class springtest {
 				"classpath*:**/*/a.xml");
         ((AbstractApplicationContext) ac).registerShutdownHook();
 
-        System.out.println(ac.getBean("b", B.class).getStr()) ;
-        System.out.println(ac.getBean("b", B.class).getA()) ;
         
         logger.debug("1234567890");
 	}
