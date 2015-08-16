@@ -14,12 +14,12 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import net.sf.json.JSONSerializer;
 
 import org.apache.log4j.Logger;
 
 import static org.junit.Assert.*;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import ziji.springtest;
@@ -28,6 +28,7 @@ public class TestA {
 	private static final Logger logger = Logger.getLogger(TestA.class);
 
 	@Test
+	@Ignore
 	public void aa() {
 		BigInteger b1 = new BigInteger("3");
 		BigInteger b2 = new BigInteger("2");
@@ -39,5 +40,12 @@ public class TestA {
 		
 		
 		System.out.println((-1 ==-1));
+	}
+	
+	@Test
+	public void bb(){
+		Integer i =0xaaaaa ;
+		System.out.println(i);
+		System.out.println(0xaaaaa);
 	}
 }
