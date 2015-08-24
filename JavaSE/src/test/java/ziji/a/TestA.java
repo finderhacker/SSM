@@ -31,22 +31,10 @@ public class TestA {
 
 	@Test
 	public void aa() {
-		String str=  "a,b,c,d,e,f";
-
-		BigInteger b1 = new BigInteger("3");
-		BigInteger b2 = new BigInteger("2");
-
+		String str1 = "BjGuDi" ;
+		String str2 = "BJGudi";
 		
-		String[] a = new String[]{str};
-		System.out.println(a.length);
-		System.out.println(b1.divide(b2));
+		System.out.println(str1.equalsIgnoreCase(str2) + "  " + str2.equalsIgnoreCase(str1));
 		
-
-
-		BigInteger bigInteger = new BigInteger(1, new byte[]{50,60,70,80,90});
-		System.out.println(bigInteger + "  " + bigInteger.bitCount() + "  "+ bigInteger.bitLength());
-		
-		
-		System.out.println((-1 ==-1));
 	}
 }
