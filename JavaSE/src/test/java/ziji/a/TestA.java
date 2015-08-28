@@ -36,26 +36,7 @@ public class TestA {
 	private static final Logger logger = Logger.getLogger(TestA.class);
 
 	@Test
-	public void aa() {
-		 Pattern p = Pattern.compile("(\\d+,)*\\d+");
-		 Matcher m1 = p.matcher("12,123,");
-		 Matcher m2 = p.matcher("");
-		
-		System.out.println(m1.matches());
-		System.out.println(Pattern.matches("(\\d+,)*\\d+", "12,123"));
-		
-		
-		System.out.println(m2.matches());
-		System.out.println(Pattern.matches("(\\d+,)*\\d+", "24，23"));
-		
-		
-		
-		StringBuilder sb = new StringBuilder();
-		System.out.println(sb.length());
-		
-		sb.append("adf我见");
-		System.out.println(sb.length());
-	}
+	public void aa() {	}
 	
 	
 	@Test
