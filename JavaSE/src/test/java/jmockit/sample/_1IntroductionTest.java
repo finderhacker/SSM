@@ -8,16 +8,18 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * 最简单的Mock示例；我们要在需要mock的类加上注解@Mocked或者@NonStrict；录制Expectations可有可没有。没有录制时，
- * 被mock的方法只会返回一个默认的值。验证Verifications可以有，也可以没有。
+ * 最简单的Mock示例；
+ * 我们要在需要mock的类加上注解@Mocked或者@NonStrict；
+ * 录制Expectations可有可没有。没有录制时，被mock的方法只会返回一个默认的值。
+ * 验证Verifications可以有，也可以没有。
  * 
  * @author Ginge
  * 
  */
-public class IntroductionTest {
+public class _1IntroductionTest {
 
 	@Mocked
-	// Mock的类型有Mocked和NonStrict
+	// Mock的类型有Mocked和NonStrict，所有方法都被mock了
 	private WinportUrlService winportUrlService = null;
 
 	@Test
@@ -39,7 +41,7 @@ public class IntroductionTest {
 				// 期望被mock的调用，以及被调用时返回的结果
 				winportUrlService.hasWinport(memberId);
 				result = false; // 也可以是returns(false);
-				// 总共可以调用的次数
+				// 总共可以调用的次数， 省略就是1次
 				times = 1;
 				
 				winportUrlService.getWinportUrlThrowException("123");
@@ -51,6 +53,5 @@ public class IntroductionTest {
 		Assert.assertEquals(false, winportUrlService.hasWinport(memberId));
 		
 		Assert.assertEquals("123", winportUrlService.getWinportUrlThrowException("123"));
-
 	}
 }

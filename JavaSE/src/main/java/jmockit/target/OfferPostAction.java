@@ -12,7 +12,7 @@ public class OfferPostAction {
 		return winportUrlService.getWinportUrlThrowException(memberId);
 	}
 	
-	public long getPostedOfferCounts(String memberId){
+	public long getPostedOfferCounts(String memberId){  //base中
 		return winportUrlService.getPostedOfferCounts(memberId);
 	}
 }

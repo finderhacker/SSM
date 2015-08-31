@@ -13,6 +13,6 @@ public class Test {
 		// 断言a<3,否则显示a不小于3，且a的值为：" + a
 //		assert a < 3 : "a不小于3" + "，且a的值为：" + a;
 		
-		throw new AssertionError();
+//		throw new AssertionError();
 	}
 }
