@@ -15,7 +15,7 @@ import org.junit.Test;
  * @author Ginge
  * 
  */
-public class StaticPartialMockingTest {
+public class _4StaticPartialMockingTest {
 	@Mocked(methods = { "[hH]asWinport" }, inverse = false)
 	// 声明的方法可以使用正则表达式
 	// methods 代表只有声明的方法才会进行mock, inverse

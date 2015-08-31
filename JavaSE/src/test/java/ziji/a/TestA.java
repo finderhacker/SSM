@@ -4,6 +4,7 @@ import java.io.InputStream;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.math.BigInteger;
+import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -28,6 +29,7 @@ import org.apache.log4j.Logger;
 
 import static org.junit.Assert.*;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import ziji.springtest;
@@ -36,10 +38,17 @@ public class TestA {
 	private static final Logger logger = Logger.getLogger(TestA.class);
 
 	@Test
-	public void aa() {	}
+	public void aa() {	
+		
+		Map<Integer, Integer> repeatMap = new TreeMap<Integer, Integer>();  //因为有BigDecimal所以，必须用TreeMap。
+		
+		System.out.println(
+		repeatMap instanceof TreeMap
+		);
+	}
 	
 	
-	@Test
+	@Test @Ignore
 	public void bb(){
 		BigDecimal b1 = new BigDecimal("2.0");
 		BigDecimal b2 = new BigDecimal("2.00");
