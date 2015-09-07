@@ -1,4 +1,4 @@
-package thinkinginjava.innerclasses.chapter10;
+package thinkinginjava.chapter10.innerclasses;
 
 public class Parcel5 {
 	private String str = "global";
