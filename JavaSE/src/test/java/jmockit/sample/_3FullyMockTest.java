@@ -15,7 +15,7 @@ import org.junit.Test;
  * @author Ginge
  * 
  */
-public class FullyMockTest {
+public class _3FullyMockTest {
 
 	@Mocked
 	private WinportUrlServiceImpl winportUrlService = null;
@@ -43,12 +43,12 @@ public class FullyMockTest {
 		// 步骤二、replay 在此阶段，录制的方法可能会被调用
 		Assert.assertEquals(false, offerPostAction.hasWinport(memberId));
 
-		//如果没有被mock，下述的调用将会抛出异常，从而导致本unit test的失败；也就证明了方法默认是被 mock的
+		//如果没有被mock，下述的调用将会抛出异常，从而导致本unit test的失败；但是并没有抛异常，也就证明了方法默认是被 mock的
 		try {
 			offerPostAction.getWinportUrlThrowException(memberId);
 		} catch (Exception e) {
 			e.printStackTrace();
-			// fully mock，默认完全被mock，到这里就注定失败
+			// fully mock，默认完全被mock，如果走到这里就肯定有问题
 			Assert.fail();
 		}
 
@@ -75,14 +75,22 @@ public class FullyMockTest {
 		// 步骤二、replay 在此阶段，录制的方法可能会被调用
 		Assert.assertEquals(false, offerPostAction.hasWinport(memberId));
 
-		//如果没有被mock，下述的调用将会抛出异常，从而导致本unit test的失败；也就证明了方法默认是被 mock的
+		//如果没有被mock，下述的调用将会抛出异常，从而导致本unit test的失败；但是并没有抛异常，也就证明了方法默认是被 mock的
 		try {
 			offerPostAction.getWinportUrlThrowException(memberId);
 		} catch (Exception e) {
 			e.printStackTrace();
-			// fully mock，默认完全被mock，到这里就注定失败
+			// fully mock，默认完全被mock，如果走到这里就肯定有问题
 			Assert.fail();
 		}
 
+	}
+	
+	@Test
+	public void gw(){
+		//class被 全mock了，这样也不会抛异常，没有record时返回默认值
+		WinportUrlServiceImpl gw = new WinportUrlServiceImpl();
+		System.out.println(gw);
+		gw.getWinportUrlThrowException("");
 	}
 }
