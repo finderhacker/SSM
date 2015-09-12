@@ -31,7 +31,7 @@ public enum OzWitch {
 			System.out.println(Arrays.toString(oz.getClass().getDeclaredConstructors()));
 		}
 		
-//		OzWitch ozWitch = new OzWitch("aa" ,10, 10, "sdf");
+//		OzWitch ozWitch = new OzWitch("aa" ,10,10,"sdf");
 	}
 
 }
