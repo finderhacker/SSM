@@ -27,6 +27,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
+
+import org.apache.commons.lang3.time.DateUtils;
 import org.apache.log4j.Logger;
 
 import static org.junit.Assert.*;
@@ -121,15 +123,15 @@ public class TestA {
 	}
 	
 	@Test
-	public void bb(){
-		String str = "9999999999999999" ;
-		Float f1 = new Float(str);
-		String str1 = f1.toString();
-		System.out.println(str + "  " + str1 );
-	
+	public void cc(){
+		Integer i = 4;
+		Integer j = 4;
+		Integer m = new Integer(4);
+		Integer n = new Integer(4);
 		
-		Double d1 = new Double(str);
-		String str2 = d1.toString();
-		System.out.println(str + "  " + str2 );
+		System.out.println(i == j);
+		System.out.println(i == m);
+		System.out.println(i == n);
+		System.out.println(m == n);
 	}
 }
