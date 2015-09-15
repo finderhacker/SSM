@@ -43,7 +43,7 @@ public class _5DynamicPartialMocking {
 				times = 1;
 			}
 		};
-		// 因此xxx没有匹配到test2009，因此下面的调用中没有被mock
+		// 因为xxx没有匹配到test2009，因此下面的调用中没有被mock
 		Assert.assertEquals(true, offerPostAction.hasWinport("xxxx"));
 
 		// 因为Expectation中声明只有一次mock，因此第一次的结果返回将是false

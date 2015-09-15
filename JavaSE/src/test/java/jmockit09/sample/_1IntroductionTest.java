@@ -40,8 +40,8 @@ public class _1IntroductionTest {
 			{
 				// 期望被mock的调用，以及被调用时返回的结果
 				winportUrlService.hasWinport(memberId);
+				// 总共可以调用的次数
 				result = false; // 也可以是returns(false);
-				// 总共可以调用的次数， 省略就是1次
 				times = 1;
 				
 				winportUrlService.getWinportUrlThrowException("123");

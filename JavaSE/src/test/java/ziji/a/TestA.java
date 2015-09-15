@@ -26,7 +26,6 @@ import java.util.TreeSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import net.sf.json.JSONSerializer;
 
 import org.apache.log4j.Logger;
 
@@ -41,6 +40,7 @@ public class TestA {
 	private static final Logger logger = Logger.getLogger(TestA.class);
 
 	@Test
+	@Ignore
 	public void aa() {
 		String str1 = "str1";
 		String str2 = "str2";
@@ -118,5 +118,18 @@ public class TestA {
 		String s1 = b1.toString();
 		String s2 = b2.toString();
 		System.out.println(s1 + "  " + s2  + "  " + s1.equals(s2));
+	}
+	
+	@Test
+	public void bb(){
+		String str = "9999999999999999" ;
+		Float f1 = new Float(str);
+		String str1 = f1.toString();
+		System.out.println(str + "  " + str1 );
+	
+		
+		Double d1 = new Double(str);
+		String str2 = d1.toString();
+		System.out.println(str + "  " + str2 );
 	}
 }
