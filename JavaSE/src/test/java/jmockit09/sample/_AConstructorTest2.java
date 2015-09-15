@@ -1,9 +1,8 @@
-package jmockit.sample;
+package jmockit09.sample;
 
 import jmockit.target.Constructor;
 import mockit.Mock;
 import mockit.Mocked;
-import mockit.Mockit;
 
 import org.junit.Assert;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package jmockit.sample;
+package jmockit09.sample;
 
 import jmockit.target.Constructor;
 import mockit.Expectations;
