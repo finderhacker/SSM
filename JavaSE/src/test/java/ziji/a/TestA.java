@@ -28,6 +28,9 @@ import java.util.regex.Pattern;
 
 
 
+
+
+
 import org.apache.commons.lang3.time.DateUtils;
 import org.apache.log4j.Logger;
 
@@ -35,6 +38,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Ignore;
 import org.junit.Test;
+
+import com.jd.fastjson.JSON;
+import com.jd.fastjson.JSONObject;
 
 import ziji.springtest;
 
@@ -124,14 +130,47 @@ public class TestA {
 	
 	@Test
 	public void cc(){
-		Integer i = 4;
-		Integer j = 4;
-		Integer m = new Integer(4);
-		Integer n = new Integer(4);
 		
-		System.out.println(i == j);
-		System.out.println(i == m);
-		System.out.println(i == n);
-		System.out.println(m == n);
+		StringBuilder jsonData = new StringBuilder();
+        jsonData.append("{");
+        jsonData.append("\"accountDays\":\"").append(0).append("\",");
+        jsonData.append("\"accountTime\":\"").append(8).append("\",");
+        jsonData.append("\"amount\":\"").append(6).append("\",");
+        jsonData.append("\"bussinessTime\":\"").append(7).append("\",");
+        jsonData.append("\"cooperationId\":\"").append(5).append("\",");
+        jsonData.append("\"currency\":\"").append(137).append("\",");
+        jsonData.append("\"direction\":\"").append(-1).append("\",");
+        jsonData.append("\"feeTypeId\":\"").append(22).append("\",");
+        jsonData.append("\"operatorPin\":\"").append(9).append("\",");
+        jsonData.append("\"rfBusinessId\":\"").append(2).append("\",");
+        jsonData.append("\"rfSystemId\":\"").append(129).append("\",");
+        jsonData.append("\"supplierId\":\"").append(3).append("\",");
+        jsonData.append("\"supplierName\":\"").append(4).append("\",");
+        jsonData.append("\"uuid\":\"").append(1).append("\"");
+        jsonData.append("}");
+		
+        
+        JSONObject obj = new JSONObject();
+        obj.put("uuid", "1");
+        obj.put("rfSystemId", "129");
+        obj.put("rfBusinessId", "2");
+        obj.put("supplierId", "3");
+        obj.put("supplierName", "4");
+        obj.put("cooperationId", "5");
+        obj.put("feeTypeId", "22");
+        obj.put("amount", "6");
+        obj.put("currency", "137");
+        obj.put("direction", "-1");
+        obj.put("bussinessTime", "7");
+        obj.put("accountTime", "8");
+        obj.put("accountDays", "0");
+        obj.put("operatorPin", "9");
+
+        System.out.println(jsonData);
+        System.out.println(obj);
+        
+        
+        System.out.println(JSON.parseObject("df:123"));
+        
 	}
 }
