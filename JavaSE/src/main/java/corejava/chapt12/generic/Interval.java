@@ -2,9 +2,15 @@ package corejava.chapt12.generic;
 
 import java.io.Serializable;
 
-public class Interval<T extends Comparable<T> & Serializable> {
+public class Interval<T extends Comparable<? super T> & Serializable> {
 	private T lower;
 	private T upper;
+
+	
+	
+	public Interval() {
+		super();
+	}
 
 	public Interval(T lower, T upper) {
 		if (lower.compareTo(upper) > 0) {

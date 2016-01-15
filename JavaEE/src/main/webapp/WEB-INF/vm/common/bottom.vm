@@ -1,0 +1,58 @@
+#macro(settletypeName $settletype)
+    #if($settletype==1)应收应付结算
+    #elseif($settletype==2)预付
+    #elseif($settletype==3)预收
+    #elseif($settletype==4)质保金
+    #elseif($settletype==5)业务收款单
+    #elseif($settletype==6)业务付款单
+    #end
+#end
+<script type="text/javascript">
+jQuery(function() {
+    function autoWidth() {
+        var w_results_box = jQuery("#main");
+        var w_grid = jQuery(".results-box .grid");
+        if (w_grid.width() > w_results_box.width()) {
+            w_results_box.width(w_grid.width() + 60);
+        }
+    }
+    autoWidth();
+
+
+    //只能输入小数,不控制输入位数
+    jQuery("input[id^='decimal']").on("focusout", function() {
+        var exp = new RegExp("^-?\\d+\.\\d+$");
+        if (exp.test(jQuery(this).val()) == false) {
+            //jQuery(this).val('0.00');
+            //alert(isNaN(jQuery(this).val()));
+        }
+        try {
+            var b = jQuery(this).val();
+            var a = parseFloat(b);
+            if ((a + '') == 'NaN') {
+                jQuery(this).val('0.00');
+            }
+        } catch(e) {
+            jQuery(this).val('0.00');
+        }
+    });
+
+    jQuery("input[id^='decimal']").on("onbeforepaste", function() {
+        var exp = new RegExp("^-?\\d+\.\\d+$");
+        if (exp.test(jQuery(this).val()) == false) {
+            jQuery(this).val('');
+        }
+    });
+});
+
+/*
+$(function() {
+    $.autoWidth = function(tableE, divE, pixel) {
+        if (tableE.width() > divE.width()) {
+            divE.width(tableE.width() + pixel);
+        }
+    }
+    $.autoWidth($(".results-box .grid"), $("#main"), 60);
+});
+*/
+</script>

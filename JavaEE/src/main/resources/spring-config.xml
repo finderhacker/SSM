@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd" default-autowire="byName">
+
+	<!-- 外部化配置  替换属性占位符 -->
+	<context:property-placeholder
+	ignore-resource-not-found="true" ignore-unresolvable="true"
+	system-properties-mode="OVERRIDE"
+	location="classpath:properties/system.properties" />
+
+	<import resource="spring/spring-bean.xml"/>
+    <import resource="spring/spring-datasource-dbcp.xml"/>
+    <import resource="spring/spring-mvc.xml"/>
+
+	<!-- Scans the classpath for 加载 与 装配 -->
+	<context:component-scan base-package="gw.javaee" />
+
+	<!-- 注解切面，暴露proxy，使用CGLib -->
+	<aop:aspectj-autoproxy expose-proxy="true" proxy-target-class="true" />
+	
+	<!-- 配置事务管理器 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- 使用annotation定义事务 -->
+    <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />
+
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="configLocation" value="classpath:mybatis-config.xml" />
+          <property name="mapperLocations" value="classpath:/mappers/*.xml" />
+    </bean>
+
+    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" ref="sqlSessionFactory" />
+        <constructor-arg index="1" value="BATCH" />
+    </bean>
+
+    <!-- 自动扫描 mapper 接口 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="gw.javaee.dao" />
+        <property name="sqlSessionTemplate" ref="sqlSessionTemplate" />
+    </bean>
+</beans>

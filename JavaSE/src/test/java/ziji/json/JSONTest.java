@@ -11,6 +11,9 @@ import org.junit.Test;
 
 
 
+
+
+
 import com.jd.fastjson.JSONObject;
 
 import ziji.a.A;
@@ -91,6 +94,11 @@ public class JSONTest {
 	
 	@Test
 	public void b(){
-		System.out.printf("123");
+		JSONObject parse = JSONObject.parseObject("{\"rfSystem\":\"131\", \"message\":null}");
+		
+		String string = parse.getString("rfSystem");
+		Object object = parse.get("message");
+		
+		System.out.printf("%s %b" , string, (object==null));
 	}
 }

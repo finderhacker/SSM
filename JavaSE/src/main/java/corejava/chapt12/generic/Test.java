@@ -1,6 +1,7 @@
 package corejava.chapt12.generic;
 
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 public class Test {
@@ -9,6 +10,8 @@ public class Test {
 		checkCase();
 		
 		varargs();
+		
+		Interval<GregorianCalendar> p = new Interval<GregorianCalendar>(); 
 	}
 	
 	

@@ -1,0 +1,19 @@
+<head>
+    <title>结算平台</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="0">
+##    引入css文件
+	<link href="#springUrl("/resources/css/index.css")" rel="stylesheet" type="text/css" media="all"/>
+    <link href="#springUrl("/resources/css/common.css")" rel="stylesheet" type="text/css"/>
+	<link href="#springUrl("/resources/css/jquery.loadmask.css")" rel="stylesheet" type="text/css"/>
+##    引入js文件
+    <script type="text/javascript" src="#springUrl("/resources/scripts/base/jquery-1.11.3.min.js")"></script>
+	<script type="text/javascript" src="#springUrl("/resources/scripts/plugins/jquery.form.js")"></script>
+	<script type="text/javascript" src="#springUrl("/resources/scripts/plugins/jquery.loadmask.js")"></script>
+    <script type="text/javascript" src="#springUrl("/resources/scripts/plugins/My97DatePicker/WdatePicker.js")"></script>
+	<script type="text/javascript" src="#springUrl("/resources/scripts/plugins/json/json2.min.js")"></script>
+	<script type="text/javascript" src="#springUrl("/resources/js/util.js")"></script>
+	<script type="text/javascript" src="#springUrl("/resources/js/posp.js")"></script>
+</head>
