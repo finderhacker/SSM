@@ -31,7 +31,6 @@ public class SerialTest {
 			System.out.println(me);
 			System.out.println(her);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -47,7 +46,6 @@ public class SerialTest {
 			System.out.println(me);
 			System.out.println(her);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

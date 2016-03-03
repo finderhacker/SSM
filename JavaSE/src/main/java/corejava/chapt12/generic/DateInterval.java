@@ -19,7 +19,6 @@ public class DateInterval extends Pair<Date> {
 	//协变返回类型也有 桥方法
 	@Override
 	protected DateInterval clone() throws CloneNotSupportedException {
-		// TODO Auto-generated method stub
 		return (DateInterval) super.clone();
 	}
 	

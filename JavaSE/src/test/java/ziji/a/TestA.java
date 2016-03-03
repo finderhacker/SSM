@@ -36,6 +36,8 @@ import java.util.regex.Pattern;
 
 
 
+
+
 import org.apache.commons.lang3.time.DateUtils;
 import org.apache.log4j.Logger;
 
@@ -55,9 +57,19 @@ public class TestA {
 	
 	@Test
 	public void dd(){
+		StringBuilder sb = new StringBuilder();
+		sb.append("\"message\":\""+ a() + "\"");
+		sb.append("\n\n");
+		sb.append("\"message\":"+ a() + "");
+		sb.append("\n\n");
 		
-		System.out.printf("fjdkjfk%%N");
+		System.out.printf(sb.toString());
 		
+	}
+
+
+	private String a() {
+		return null;
 	}
 
 }

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd" default-autowire="byName">
+
+	
+    <bean id="knight" class="gw.javaee.springinaction.knights.BraveKnight">
+		<constructor-arg ref="quest"></constructor-arg>
+	</bean>
+	
+    <bean id="quest" class="gw.javaee.springinaction.knights.SlayDragonQuest">
+	</bean>
+
+    <bean id="minstrel" class="gw.javaee.springinaction.knights.Minstrel">
+	</bean>
+	
+	<aop:config>
+		<aop:aspect ref="minstrel">
+			<aop:pointcut expression="execution(* *.embarkOnQuest(..))" id="embark"/>
+			
+			<aop:before method="singBeforeQuest" pointcut-ref="embark"/>
+			<aop:after method="singAfterQuest" pointcut-ref="embark"/>
+		</aop:aspect>
+	</aop:config>
+</beans>

@@ -9,7 +9,6 @@ public class Junit4TimeoutTest {
 		try {
 			Thread.sleep(11);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.out.println("123");
