@@ -16,7 +16,6 @@
 	<servlet>
 		<servlet-name>springmvc</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<!-- SpringMVC WebApplicationContext get from Root WebApplicationContext-->
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value></param-value>

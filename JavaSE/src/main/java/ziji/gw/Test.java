@@ -7,19 +7,15 @@ import com.jd.fastjson.JSON;
 
 import corejava.chapt12.generic.Pair;
 
+
+//-Xms512m -Xmx7168m
+//-Xms7168m -Xmx7168m
 public class Test {
 
+	private static int _1MB = 1024*1024;
+	
 	public static void main(String[] args) {
-		
-		
-		Object parse = JSON.parse("");
-		System.out.printf("%s", parse);
-		
-		parse = JSON.parse(null);
-		System.out.printf("%s", parse);
-		
-		Person parseObject = JSON.parseObject("{\"1\":[\"a\",123], \"name\":\"123\"}", Person.class);
-		System.out.printf("%s", parseObject);
+		System.out.printf("%s", "你好联通移动");
 	}
 	
 }
