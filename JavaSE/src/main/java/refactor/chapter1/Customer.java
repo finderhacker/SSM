@@ -47,50 +47,55 @@ public class Customer {
 	}
 	
 	public String statement(){
-		double totalAmount = 0d;
-		int frequentRenterPoints = 0;
 		Enumeration<Rental> rentals = _rentals.elements();
 		
 		String result = "Rental Record for " + _name + "\n";
 		while(rentals.hasMoreElements()){
 			Rental each = rentals.nextElement();
 			
-			//租金
-			double thisAmount = 0d;
-			switch(each.getMovie().getPriceCode()){
-			case Movie.REGULAR:
-				thisAmount += 2;
-				if(each.getDaysRented() > 2){
-					thisAmount += (each.getDaysRented() - 2) * 1.5;
-				}
-				break;
-			case Movie.NEW_RELEASE:
-				thisAmount += each.getDaysRented() * 3;
-				break;
-			case Movie.CHILDRENS:
-				thisAmount += 1.5;
-				if(each.getDaysRented() > 3){
-					thisAmount += (each.getDaysRented() -3 ) * 1.5;
-				}
-				break;
-			}
-			totalAmount += thisAmount;
-			
-			
-			//=gw 这个写法，也可以放到上面的switch中啊， 租金计算与积分计算在一起？？？
-			//积分
-			frequentRenterPoints ++;
-			if(each.getMovie().getPriceCode() == Movie.NEW_RELEASE && each.getDaysRented() > 1){
-				frequentRenterPoints ++;
-			}
-			
-			
 			//展示
-			result += "\t" + each.getMovie().getTitle() + "\t" + thisAmount + "\n";
+			result += "\t" + each.getMovie().getTitle() + "\t" + each.getCharge() + "\n";
 		}
 		
-		result += "Amount owed is " + totalAmount + "\n";
-		result += "You earned " + frequentRenterPoints + " frequent renter points";
+		result += "Amount owed is " + getTotalCharge() + "\n";
+		result += "You earned " + getTotalFrequentRenterPoints() + " frequent renter points";
+		return result;
+	}
+	
+	
+	public String htmlStatement(){
+		Enumeration<Rental> rentals = _rentals.elements();
+		
+		String result = "<H1>Rental Record for <EM>" + _name + "</EM></H1><P>\n";
+		while(rentals.hasMoreElements()){
+			Rental each = rentals.nextElement();
+			
+			//展示
+			result += each.getMovie().getTitle() + ": " + each.getCharge() + "<BR>\n";
+		}
+		
+		result += "Amount owed is " + getTotalCharge() + "\n";
+		result += "You earned " + getTotalFrequentRenterPoints() + " frequent renter points";
+		return result;
+	}
+	
+	private double getTotalCharge(){
+		double result = 0;
+		Enumeration<Rental> rentals = _rentals.elements();
+		while(rentals.hasMoreElements()){
+			Rental each = rentals.nextElement();
+			result += each.getCharge();
+		}
+		return result;
+	}
+	
+	private int getTotalFrequentRenterPoints(){
+		int result = 0;
+		Enumeration<Rental> rentals = _rentals.elements();
+		while(rentals.hasMoreElements()){
+			Rental each = rentals.nextElement();
+			result += each.getFrequentRenterPoints();
+		}
 		return result;
 	}
 
