@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie.java</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <link rel='stylesheet' type='text/css' href='../../coverage.css'/>
+  <link rel='shortcut icon' type='image/png' href='../../logo.png'/>
+  <script type='text/javascript' src='../../coverage.js'></script>
+  <script type='text/javascript' src='../../prettify.js'></script>
+</head>
+<body onload='prettyPrint()'>
+  <table cellpadding='0' cellspacing='1'>
+    <caption>JavaSE\src\main\java\refactor\chapter1\Movie.java</caption>
+    <tr>
+      <td class='line'>1</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>package refactor.chapter1;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>3</td><td>&nbsp;</td>
+      <td><pre class='comment'>//影片   </pre></td>
+    </tr>
+    <tr>
+      <td class='line'>4</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>public class Movie {</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>6</td><td>&nbsp;</td>
+      <td><pre class='comment'>	//影片类型， 一个影片在生命周期中可以调整类型</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>7</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public final static int CHILDRENS = 2;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>8</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public final static int REGULAR = 0;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>9</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public final static int NEW_RELEASE = 1;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>11</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	private String _title;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>12</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	private Price _price;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>14</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public Movie() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>15</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l15s0'>		super();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>16</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l16s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>18</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public Movie(String title, int priceCode) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>19</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l19s0'>		super();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>20</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l20s0'>		this._title = title;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>21</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l21s0'>		setPriceCode(priceCode);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>22</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l22s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * @return the title
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>27</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getTitle() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>28</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l28s0'>		return _title;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>29</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * @param title
+	 *            the title to set
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>35</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public void setTitle(String title) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>36</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l36s0'>		this._title = title;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>37</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l37s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * @return the priceCode
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>42</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public int getPriceCode() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>43</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l43s0'>		return _price.getPriceCode();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>44</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * @param priceCode
+	 *            the priceCode to set
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>50</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public void setPriceCode(int priceCode) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>51</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l51s0'>		switch (priceCode) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>52</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		case REGULAR:</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>53</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l53s0'>			_price = new RegularPrice();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>54</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l54s0'>			break;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>55</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		case CHILDRENS:</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>56</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l56s0'>			_price = new ChildrensPrice();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>57</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l57s0'>			break;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>58</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		case NEW_RELEASE:</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>59</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l59s0'>			_price = new NewReleasePrice();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>60</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l60s0'>			break;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>61</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		default:</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>62</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l62s0'>			throw new IllegalArgumentException("Incorrect Price Code");</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>63</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>64</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l64s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>66</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	double getCharge(int daysRented) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>67</td><td class='count'>18</td>
+      <td><pre class='prettyprint covered' id='l67s0'>		return _price.getCharge(daysRented);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>68</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>70</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	int getFrequentRenterPoints(int daysRented) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>71</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l71s0'>		return _price.getFrequentRenterPoints(daysRented);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>72</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>74</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>}</pre></td>
+    </tr>
+  </table>
+</body>
+</html>

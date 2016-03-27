@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rental.java</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <link rel='stylesheet' type='text/css' href='../../coverage.css'/>
+  <link rel='shortcut icon' type='image/png' href='../../logo.png'/>
+  <script type='text/javascript' src='../../coverage.js'></script>
+  <script type='text/javascript' src='../../prettify.js'></script>
+</head>
+<body onload='prettyPrint()'>
+  <table cellpadding='0' cellspacing='1'>
+    <caption>JavaSE\src\main\java\refactoring\chapter1\Rental.java</caption>
+    <tr>
+      <td class='line'>1</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>package refactoring.chapter1;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>3</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>public class Rental {</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>5</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	private Movie movie;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>6</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	private int daysRented;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>8</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public Rental() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>9</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l9s0'>		super();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>10</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l10s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>12</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public Rental(Movie movie, int daysRented) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>13</td><td class='count'>6</td>
+      <td><pre class='prettyprint covered' id='l13s0'>		super();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>14</td><td class='count'>6</td>
+      <td><pre class='prettyprint covered' id='l14s0'>		this.movie = movie;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>15</td><td class='count'>6</td>
+      <td><pre class='prettyprint covered' id='l15s0'>		this.daysRented = daysRented;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>16</td><td class='count'>6</td>
+      <td><pre class='prettyprint covered' id='l16s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>18</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public Movie getMovie() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>19</td><td class='count'>18</td>
+      <td><pre class='prettyprint covered' id='l19s0'>		return movie;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>20</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>22</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public void setMovie(Movie movie) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>23</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l23s0'>		this.movie = movie;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>24</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l24s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>26</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public int getDaysRented() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>27</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l27s0'>		return daysRented;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>28</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>30</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public void setDaysRented(int daysRented) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>31</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l31s0'>		this.daysRented = daysRented;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>32</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l32s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>34</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	double getCharge() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>35</td><td class='count'>6</td>
+      <td><pre class='prettyprint covered' id='l35s0'>		double result = 0;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>36</td><td class='count'>6</td>
+      <td><pre class='prettyprint covered' id='l36s0'>		switch(getMovie().getPriceCode()){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>37</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		case Movie.REGULAR:</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>38</td><td class='count'>4</td>
+      <td><pre class='prettyprint covered' id='l38s0'>			result += 2;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>39</td><td class='count'>4</td>
+      <td><pre class='prettyprint jmp'>			<span id='l39s0' title='Executions: 4' class='covered'>if(getDaysRented() > 2)</span>{</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>40</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l40s0'>				result += (getDaysRented() -2) * 1.5;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>41</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>			}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>42</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l42s0'>			break;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>43</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		case Movie.NEW_RELEASE:</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>44</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l44s0'>			result += getDaysRented() * 3;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>45</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l45s0'>			break;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>46</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		case Movie.CHILDRENS:</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>47</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l47s0'>			result += 1.5;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>48</td><td class='count'>2</td>
+      <td><pre class='prettyprint jmp'>			<span id='l48s0' title='Executions: 2' class='covered'>if(getDaysRented() > 3)</span>{</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>49</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l49s0'>				result += (getDaysRented() - 3) * 1.5;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>50</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>			}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>51</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>			break;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>52</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>53</td><td class='count'>6</td>
+      <td><pre class='prettyprint covered' id='l53s0'>		return result;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>54</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>55</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>}</pre></td>
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>InstanceInternalAccess.java</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <link rel='stylesheet' type='text/css' href='../../coverage.css'/>
+  <link rel='shortcut icon' type='image/png' href='../../logo.png'/>
+  <script type='text/javascript' src='../../coverage.js'></script>
+  <script type='text/javascript' src='../../prettify.js'></script>
+</head>
+<body onload='prettyPrint()'>
+  <table cellpadding='0' cellspacing='1'>
+    <caption>JavaSE\src\main\java\jmockit\target\InstanceInternalAccess.java</caption>
+    <tr>
+      <td class='line'>1</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>package jmockit.target;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>/**
+ * 示例一个公共方法内部调用了一个私有方法；示例私有成员变量的设值。
+ * 
+ * @author Ginge
+ * 
+ */</div><span>/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>9</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>public class InstanceInternalAccess {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>10</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	private int memberCounts;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>12</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	private int getMemberCounts() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>13</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		return this.memberCounts;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>14</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * 把传入的count和内部定义的私有int类型的memberCounts的值相加，返回相加的结果。
+	 * 
+	 * @param count
+	 * @return
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>22</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public int sumInternalCounts(int count) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>23</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		int myCount = this.getMemberCounts();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>24</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		return myCount + count;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>25</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>26</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>}</pre></td>
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NewReleasePrice.java</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <link rel='stylesheet' type='text/css' href='../../coverage.css'/>
+  <link rel='shortcut icon' type='image/png' href='../../logo.png'/>
+  <script type='text/javascript' src='../../coverage.js'></script>
+  <script type='text/javascript' src='../../prettify.js'></script>
+</head>
+<body onload='prettyPrint()'>
+  <table cellpadding='0' cellspacing='1'>
+    <caption>JavaSE\src\main\java\refactor\chapter1\NewReleasePrice.java</caption>
+    <tr>
+      <td class='line'>1</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>package refactor.chapter1;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>3</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l3s0'>public class NewReleasePrice extends Price {</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>5</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>6</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	int getPriceCode() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>7</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l7s0'>		return Movie.NEW_RELEASE;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>8</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>10</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	double getCharge(int daysRented) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>11</td><td class='count'>6</td>
+      <td><pre class='prettyprint covered' id='l11s0'>		return daysRented * 3;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>12</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>14</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	int getFrequentRenterPoints(int daysRented) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>15</td><td class='count'>3</td>
+      <td><pre class='prettyprint jmp'>		<span id='l15s0' title='Executions: 3' class='covered'>return (daysRented > 1)</span> ? <span id='l15s1' title='Executions: 2' class='covered'>2</span> : <span id='l15s2' title='Executions: 1' class='covered'>1;</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>16</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>17</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>}</pre></td>
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customer.java</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <link rel='stylesheet' type='text/css' href='../../coverage.css'/>
+  <link rel='shortcut icon' type='image/png' href='../../logo.png'/>
+  <script type='text/javascript' src='../../coverage.js'></script>
+  <script type='text/javascript' src='../../prettify.js'></script>
+</head>
+<body onload='prettyPrint()'>
+  <table cellpadding='0' cellspacing='1'>
+    <caption>JavaSE\src\main\java\refactor\chapter1\Customer.java</caption>
+    <tr>
+      <td class='line'>1</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>package refactor.chapter1;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td><pre class='imports prettyprint' onclick='showHideLines(this)'><div>import java.util.Enumeration;
+import java.util.Vector;
+</div><span>import ...</span></pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>6</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>public class Customer {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>7</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	private String _name;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>8</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l8s0'>	private Vector&lt;Rental> _rentals = new Vector&lt;Rental>();</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>10</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l10s0'>	public Customer() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>11</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l11s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>13</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public Customer(String name, Vector&lt;Rental> rentals) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>14</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l14s0'>		super();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>15</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l15s0'>		this._name = name;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>16</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l16s0'>		this._rentals = rentals;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>17</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l17s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * @return the name
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>22</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getName() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>23</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l23s0'>		return _name;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>24</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * @param name
+	 *            the name to set
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>30</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public void setName(String name) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>31</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l31s0'>		this._name = name;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>32</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l32s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * @return the rentals
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>37</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public Vector&lt;Rental> getRentals() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>38</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l38s0'>		return _rentals;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>39</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * @param rentals
+	 *            the rentals to set
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>45</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public void setRentals(Vector&lt;Rental> rentals) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>46</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l46s0'>		this._rentals = rentals;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>47</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l47s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>49</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String statement(){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>50</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l50s0'>		Enumeration&lt;Rental> rentals = _rentals.elements();</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>52</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l52s0'>		String result = "Rental Record for " + _name + "\n";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>53</td><td class='count'>11</td>
+      <td><pre class='prettyprint covered' id='l53s0'>		while(rentals.hasMoreElements()){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>54</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l54s0'>			Rental each = rentals.nextElement();</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>56</td><td>&nbsp;</td>
+      <td><pre class='comment'>			//展示</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>57</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l57s0'>			result += "\t" + each.getMovie().getTitle() + "\t" + each.getCharge() + "\n";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>58</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>60</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l60s0'>		result += "Amount owed is " + getTotalCharge() + "\n";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>61</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l61s0'>		result += "You earned " + getTotalFrequentRenterPoints() + " frequent renter points";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>62</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l62s0'>		return result;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>63</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>66</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String htmlStatement(){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>67</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l67s0'>		Enumeration&lt;Rental> rentals = _rentals.elements();</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>69</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l69s0'>		String result = "&lt;H1>Rental Record for &lt;EM>" + _name + "&lt;/EM>&lt;/H1>&lt;P>\n";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>70</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l70s0'>		while(rentals.hasMoreElements()){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>71</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l71s0'>			Rental each = rentals.nextElement();</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>73</td><td>&nbsp;</td>
+      <td><pre class='comment'>			//展示</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>74</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l74s0'>			result += each.getMovie().getTitle() + ": " + each.getCharge() + "&lt;BR>\n";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>75</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>77</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l77s0'>		result += "Amount owed is " + getTotalCharge() + "\n";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>78</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l78s0'>		result += "You earned " + getTotalFrequentRenterPoints() + " frequent renter points";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>79</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l79s0'>		return result;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>80</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>82</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	private double getTotalCharge(){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>83</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l83s0'>		double result = 0;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>84</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l84s0'>		Enumeration&lt;Rental> rentals = _rentals.elements();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>85</td><td class='count'>11</td>
+      <td><pre class='prettyprint covered' id='l85s0'>		while(rentals.hasMoreElements()){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>86</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l86s0'>			Rental each = rentals.nextElement();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>87</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l87s0'>			result += each.getCharge();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>88</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>89</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l89s0'>		return result;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>90</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>92</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	private int getTotalFrequentRenterPoints(){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>93</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l93s0'>		int result = 0;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>94</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l94s0'>		Enumeration&lt;Rental> rentals = _rentals.elements();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>95</td><td class='count'>11</td>
+      <td><pre class='prettyprint covered' id='l95s0'>		while(rentals.hasMoreElements()){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>96</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l96s0'>			Rental each = rentals.nextElement();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>97</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l97s0'>			result += each.getFrequentRenterPoints();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>98</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>99</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l99s0'>		return result;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>100</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>102</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>}</pre></td>
+    </tr>
+  </table>
+</body>
+</html>
